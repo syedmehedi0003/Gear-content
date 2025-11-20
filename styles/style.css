@@ -8,7 +8,7 @@
 }
 
 /* sharde design below  */
-body{
+header, main{
     max-width: 90%;
     margin: 0 auto;
 }
@@ -67,6 +67,7 @@ ul > li:hover{
 
 .banner{
     margin-top: 60px;
+    background-image: url("images/Circle design.png");
 }
 
 .banner-container{
@@ -88,6 +89,8 @@ ul > li:hover{
 }
 
 .banner-img{
+    background-image: url("images/Circle-design.png"); 
+    /* don't work  */
     transition: transform 1s ease-in-out 0.5s; /* Smooth transition */
 }
 
@@ -95,3 +98,169 @@ ul > li:hover{
      transform: rotate(360deg); /* Rotates 45 degrees clockwise on hover */
 }
 
+.brands-content{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-items: center;
+}
+.brands{
+    border-top: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    margin: 80px 0px 120px 0px;
+}
+
+.cards-container h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 80px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.card{
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.card h3{
+    margin: 16px 0px 0px 0px;
+}
+
+.card h4{
+    margin: 15px 0px;
+}
+
+.star-bg{
+    color: #FB8200;
+}
+
+.see-btn{
+     display: flex;
+     justify-content: flex-end;
+     padding-right: 20px;
+}
+
+.seemore{
+    background-color: none;
+    border: none;
+    color: #E02C6D;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 40px;
+   
+}
+
+.featured{
+    margin-top: 100px;
+}
+
+.featured-content{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-content h2{
+    font-size: 30px;
+}
+
+.join-btn{
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #0a0826;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.footer-content{
+    padding: 50px 0px;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.footer-content p{
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.icon{
+    gap:40px;
+}
+
+@media screen and (max-width: 576px) {
+    nav{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .banner-container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .banner-text h1{
+        font-size: 35px;
+    }
+    .banner-img img{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .brands-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .cards{
+         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .featured-content{
+        flex-direction: column-reverse;
+    }
+
+    .feature-img img{
+       padding-left: 5%;
+       padding-right: 5%;
+       max-width: 90%;
+    }
+
+    .feature-text{
+    text-align: center;
+    }
+   
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .brands-content{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+     .cards{
+         grid-template-columns: repeat(2, 1fr);
+    }
+}
